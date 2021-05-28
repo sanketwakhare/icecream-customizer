@@ -44,36 +44,26 @@ class IceCream extends React.Component {
     });
   };
 
-  onAddToCart = (event) => {
-    const { selectedConeWafer, selectedFlavour, selectedToppings } = this.state;
-
-    console.log(selectedConeWafer, selectedFlavour, selectedToppings);
-  };
-
   render() {
-    const { coneWafer, flavour, toppings } = this.props;
+    const { coneWafer, flavour, toppings, onAddToCart } = this.props;
     return (
-      <main className="block col-2">
-        <form>
-          <ConeWafer
-            coneWafer={coneWafer}
-            onConeWaferChange={this.onConeWaferChange}
-            className="row"
-          />
-          <Flavour
-            flavour={flavour}
-            onFlavourChange={this.onFlavourChange}
-            className="row"
-          />
-          <Toppings
-            toppings={toppings}
-            onToppingsChange={this.onToppingsChange}
-            className="row"
-          />
-          <button onClick={this.onAddToCart} className="btn btn-primary">
-            Add Ice Cream to Cart
-          </button>
-        </form>
+      <main className="block col-2 center">
+        <ConeWafer
+          coneWafer={coneWafer}
+          onConeWaferChange={this.onConeWaferChange}
+        />
+        <Flavour flavour={flavour} onFlavourChange={this.onFlavourChange} />
+        <Toppings
+          toppings={toppings}
+          onToppingsChange={this.onToppingsChange}
+        />
+        <hr></hr>
+        <button
+          onClick={() => onAddToCart(this.state)}
+          className="btn btn-primary"
+        >
+          Add Ice Cream to Cart
+        </button>
       </main>
     );
   }

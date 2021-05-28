@@ -4,10 +4,10 @@ class Flavour extends React.Component {
   render() {
     const { flavour, onFlavourChange } = this.props;
     return (
-      <div>
+      <div className="row">
         <h1>Choose any one Flavour</h1>
         {flavour.map((flavourItem) => (
-          <div key={flavourItem.flavourName}>
+          <div key={flavourItem.flavourName} className="col-1">
             <input
               type="radio"
               name="flavour"

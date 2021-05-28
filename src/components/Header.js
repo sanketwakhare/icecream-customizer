@@ -17,23 +17,46 @@ class Header extends React.Component {
   }
 
   render() {
+    const { countCartItems } = this.props;
     return (
       <div>
-        <header className="block row">
-          <div className="col-1">
+        <header className="block row center">
+          <div className="col-2">
             <a href="#/">
               <h1>Customize Ice Cream</h1>
             </a>
           </div>
-          <div className="col-2">
-            <button
-              id="theme-toggle"
-              onClick={this.handleOnThemeChange}
-              type="button"
-              className="btn btn-danger"
-            >
-              Dark Mode
-            </button>
+          <div className="col-1">
+            <div className="row">
+              <div className="col-1">
+                <button
+                  id="theme-toggle"
+                  onClick={this.handleOnThemeChange}
+                  type="button"
+                  className="btn btn-danger"
+                >
+                  Dark Mode
+                </button>
+              </div>
+              <div className="col-1 col-right">
+                {/* Cart{" "} */}
+                {countCartItems ? (
+                  <button type="button" className="btn btn-success">
+                    Cart{" "}
+                    <span className="badge bg-warning text-dark">
+                      {countCartItems}
+                    </span>
+                  </button>
+                ) : (
+                  <button type="button" className="btn btn-success">
+                    Cart{" "}
+                    <span className="badge bg-warning text-dark">
+                      {countCartItems}
+                    </span>
+                  </button>
+                )}
+              </div>
+            </div>
           </div>
         </header>
       </div>

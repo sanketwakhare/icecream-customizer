@@ -1,12 +1,12 @@
 # Steps to use the Repository
 
-### Clone the Repo
+### Clone this Repo
 
-### Go to cloned repo i.e. cd icecream-customizer
-
-(ignore vulnerabilities if any)
+### cd into the cloned repo i.e. cd icecream-customizer
 
 ### Run `npm install`
+
+#(ignore vulnerabilities if any)
 
 ### Run `npm start`
 

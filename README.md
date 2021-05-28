@@ -6,7 +6,7 @@
 
 ### Run `npm install`
 
-#(ignore vulnerabilities if any)
+(Ignore vulnerabilities if any)
 
 ### Run `npm start`
 

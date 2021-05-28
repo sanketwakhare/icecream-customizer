@@ -2,6 +2,10 @@
 
 ### Clone the Repo
 
+### Go to cloned repo i.e. cd icecream-customizer
+
+(ignore vulnerabilities if any)
+
 ### Run `npm install`
 
 ### Run `npm start`
